@@ -17,3 +17,10 @@ console.log(greeting + " " + name);
 //return values
 console.log(Math.max(2,4));
 console.log(Math.min(4,5) + 19)
+
+var x = "Kumasi";
+if (x === "Kumasi"){
+    console.log("You are correct");
+}
+else {
+    console.log("You are wrong");}
