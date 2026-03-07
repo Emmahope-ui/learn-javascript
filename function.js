@@ -143,4 +143,45 @@ function sayGreeting(name){
 }
 console.log(sayGreeting("Emmanuel"));
 
-//IIFE
+//IIFE , execute the function immediately its defined                                                                                                                                   
+(function x(){
+    console.log("IIFE")
+})()
+
+//call stack When JavaScript runs a function, it places that function on top of the stack.
+//When the function finishes, it comes off the stack.
+function greet(){
+    sayName();
+}
+function sayName(){
+    console.log("Emmanuel");
+}
+greet();
+
+//recursion is a function that calls itself
+/*function foo(){
+}
+function foo(){
+    console.log("foo");
+    foo();
+}
+foo();*/
+
+//base recursion
+function recurse(){
+    if (base_condition){
+        return; 
+    }
+    recurse; 
+}
+
+
+function fetchwater(count){
+    if(count === 0){
+        console.log("no more water left");
+        return;
+    }
+    console.log("fetching water ....");
+    fetchwater(count-1);
+}
+fetchwater(5);
